@@ -1,6 +1,5 @@
 // import logo from "./logo.svg";
 import FunctionalComponent from "./function-component";
-import ClassComponent from "../class-component";
 import React, { Component } from "react";
 
 class FeatureComponent extends Component {
@@ -31,7 +30,6 @@ class FeatureComponent extends Component {
           {...data}
           dataObj={dataObj}
         ></FunctionalComponent>
-        <ClassComponent></ClassComponent>
       </div>
     );
   }

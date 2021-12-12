@@ -1,7 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #333;
+}
+.react-learning-container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.react-learning-app {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "sidebar content";
+  gap: 10px;
+}
+
+.side-nav-bar {
+  grid-area: sidebar;
+}
+
+.react-learning-app-content {
+  grid-area: content;
+}
 
 .react-learning-footer {
   position: fixed;
   bottom: 20px;
   background-color: #ccc;
   padding: 10px;
+}
+
+/* sidebar */
+.side-nav-bar h1 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.side-nav-bar ul {
+  list-style-type: none;
+}
+
+.side-nav-bar li {
+  margin-bottom: 5px;
+}
+
+.side-nav-bar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.side-nav-bar a:hover {
+  border-bottom: #ccc 1px solid;
 }
