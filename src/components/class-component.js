@@ -30,11 +30,9 @@ class ClassComponent extends Component {
     if (this.state.data.length > 0) {
       dataTodisplay = this.state.data.map((item, i) => {
         return (
-          <ul className="list-none">
-            <li>
+            <div key={item.id}>
               {i + 1}. {item.title}
-            </li>
-          </ul>
+            </div>
         );
       });
     } else {
