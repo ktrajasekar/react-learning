@@ -1,6 +1,6 @@
 import "./App.css";
 import "./mediaqueries.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./components/home";
 import FeatureComponent from "./components/feature-component";
 import ClassComponent from "./components/class-component";
@@ -15,25 +15,23 @@ function App() {
           <h1>React Learning Index</h1>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <NavLink to="/" activeclassname="active-link">Home</NavLink>
             </li>
             <li>
-              <Link to="/feature-component">Functional Component</Link>
+              <NavLink to="/feature-component"  activeclassname="active-link">Functional Component</NavLink>
             </li>
             <li>
-              <Link to="/class-component">Class Component</Link>
+              <NavLink to="/class-component" activeclassname="active-link">Class Component</NavLink>
             </li>
           </ul>
         </div>
         <Routes>
           <Route
-            exact
             path="/feature-component"
             element={<FeatureComponent />}
           ></Route>
-          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route
-            exact
             path="/class-component"
             element={<ClassComponent />}
           ></Route>

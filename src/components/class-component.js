@@ -5,6 +5,8 @@ class ClassComponent extends Component {
     super(props);
     this.state = {
       count: 9,
+      data: [],
+      isLoading: true,
     };
   }
   componentDidMount() {
@@ -14,7 +16,8 @@ class ClassComponent extends Component {
     }));
     fetch("https://jsonplaceholder.typicode.com/todos/")
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((data) => this.setState({ data: data }))
+      .catch((e) => console.log("Error while fetch data", e));
   }
   componentDidUpdate() {
     console.log("component updating");
@@ -23,7 +26,29 @@ class ClassComponent extends Component {
     console.log("component will unmount");
   }
   render() {
-    return <div>Class Component Created {this.state.count}</div>;
+    let dataTodisplay;
+    if (this.state.data.length > 0) {
+      dataTodisplay = this.state.data.map((item, i) => {
+        return (
+          <ul className="list-none">
+            <li>
+              {i + 1}. {item.title}
+            </li>
+          </ul>
+        );
+      });
+    } else {
+      dataTodisplay = <div className="loader"></div>;
+    }
+    return (
+      <div>
+        Class Component Created {this.state.count}
+        <div>
+          <h2>Data Count {this.state.data.length}</h2>
+          {dataTodisplay}
+        </div>
+      </div>
+    );
   }
 }
 

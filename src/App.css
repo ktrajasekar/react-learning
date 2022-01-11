@@ -1,11 +1,26 @@
+:root {
+  --brand-black: #333;
+  --link-bottom-black: #ccc;
+}
+
 * {
   padding: 0;
   margin: 0;
 }
 
-body {
-  color: #333;
+body,
+a {
+  color: var(--brand-black);
 }
+
+.default-link a {
+  text-decoration: none;
+}
+
+.default-link a:hover {
+  border-bottom: var(--link-bottom-black) 1px solid;
+}
+
 .react-learning-container {
   max-width: 1110px;
   margin: 0 auto;
@@ -49,9 +64,44 @@ body {
 
 .side-nav-bar a {
   text-decoration: none;
-  color: #333;
+  color: var(--brand-black);
 }
 
 .side-nav-bar a:hover {
-  border-bottom: #ccc 1px solid;
+  border-bottom: var(--link-bottom-black) 1px solid;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+
+.loader {
+  position: absolute;
+  top: calc(50% - 4em);
+  left: calc(50% - 4em);
+  width: 6em;
+  height: 6em;
+  border: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #000000;
+  border-radius: 50%;
+  animation: load8 1.1s infinite linear;
+  transition: opacity 0.3s;
+}
+
+.loader--hide {
+  opacity: 0;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list-none {
+  list-style-type: none;
 }
