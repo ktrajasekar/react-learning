@@ -7,7 +7,9 @@
   padding: 0;
   margin: 0;
 }
-
+body {
+  background-color: #F0ECE3;
+}
 body,
 a {
   color: var(--brand-black);
@@ -49,6 +51,15 @@ a {
 }
 
 /* sidebar */
+.side-nav-bar {
+  padding: 15px;
+  height: 100vh;
+}
+
+.side-nav-bar .active {
+  color: #000;
+}
+
 .side-nav-bar h1 {
   font-size: 1rem;
   margin-bottom: 20px;
@@ -104,4 +115,11 @@ a {
 
 .list-none {
   list-style-type: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  border: 0;
+  margin: 10px;
 }
