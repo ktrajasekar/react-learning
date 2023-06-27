@@ -1,0 +1,66 @@
+import React, { useState } from 'react';
+
+const Menu = () => {
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  const menuOptions = [
+    {
+      category: 'starters',
+      items: [
+        {
+          name: 'Grill Chicken',
+          img: ''
+        },
+        {
+          name: 'Grill Fish',
+          img: ''
+        }
+      ]
+    },
+    {
+      category: 'mainCourse',
+      items: [
+        {
+          name: 'Lamb Roast',
+          img: ''
+        },
+        {
+          name: 'Creamy Salad',
+          img: ''
+        },
+        {
+          name: 'Chicken BBQ Burger',
+          img: ''
+        }
+      ]
+    }
+  ];
+
+  // Filter items based on the selected option
+  const filteredItems = menuOptions.find(option => option.category === selectedOption)?.items || [];
+
+  return (
+    <div>
+      <label htmlFor="menu-select">Select an option:</label>
+      <select id="menu-select" value={selectedOption} onChange={handleChange}>
+        <option value="">Select...</option>
+        {menuOptions.map(option => (
+          <option key={option.category} value={option.category}>{option.category}</option>
+        ))}
+      </select>
+
+      <h2>Selected Items:</h2>
+      <ul>
+        {filteredItems.map(item => (
+          <li key={item.name}>{item.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Menu;
