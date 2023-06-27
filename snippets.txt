@@ -64,3 +64,84 @@ const Menu = () => {
 };
 
 export default Menu;
+[
+  {
+    "resturantName": "Son' Restaurant",
+    "cover": "/contents/son-restaurant.png",
+    "cuisine": "French,European,Contemporary",
+    "priceRange": "100$-200$",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "category": "top",
+    "gallery": [
+      "/contents/son-restaurant-photo-1.png",
+      "/contents/son-restaurant-photo-2.png",
+      "/contents/son-restaurant-photo-3.png",
+      "/contents/son-restaurant-photo-4.png",
+      "/contents/son-restaurant-photo-5.png",
+      "/contents/son-restaurant-photo-6.png"
+    ],
+    "menuOptions": [
+      {
+        "category": "starters",
+        "items": [
+          {
+            "name": "Grill Chicken",
+            "img": ""
+          },
+          {
+            "name": "Grill Fish",
+            "img": ""
+          }
+        ]
+      },
+      {
+        "category": "mainCourse",
+        "items": [
+          {
+            "name": "Lamb Roast",
+            "img": ""
+          },
+          {
+            "name": "Creamy Salad",
+            "img": ""
+          },
+          {
+            "name": "Chicken BBQ Burger",
+            "img": ""
+          }
+        ]
+      }
+    ],
+    "details": {
+      "dine": "Breakfast, Dinner, Drinks",
+      "contact": "000 0000 0000",
+      "web": "http://sonsrestaurant.com",
+      "address": "14 rue Paul Louis Lande, 33000, Bordeaux France"
+    }
+  },
+  {
+    "resturantName": "Hotel Dwame des Arts",
+    "cover": "/contents/son-restaurant-1.png",
+    "cuisine": "French, Chinese",
+    "menu": [
+      {
+        "mainCourse": [{}],
+        "starters": [{}]
+      }
+    ],
+    "details": {}
+  },
+  {
+    "resturantName": "Hotel Dame des Awrts",
+    "cuisine": "French, Chinese",
+    "category": "popular",
+    "cover": "/contents/son-restaurant.png",
+    "menu": [
+      {
+        "mainCourse": [{}],
+        "starters": [{}]
+      }
+    ],
+    "details": {}
+  }
+]
